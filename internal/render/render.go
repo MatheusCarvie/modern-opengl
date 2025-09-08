@@ -1,6 +1,7 @@
 package render
 
 import (
+	"fmt"
 	"log"
 
 	"github.com/go-gl/gl/v4.6-core/gl"
@@ -10,6 +11,8 @@ func Initialize() {
 	if err := gl.Init(); err != nil {
 		log.Fatalln("Failed to initialize OpenGL:", err)
 	}
+
+	fmt.Println("OpenGL version:", gl.GoStr(gl.GetString(gl.VERSION)))
 }
 
 func Clear() {

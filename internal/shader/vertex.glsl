@@ -1,5 +1,5 @@
 // Versao do GLSL
-#version 460 core
+#version 450 core
 
 // Entrada / Saida
 // layout(location=0)in vec3 aPos;

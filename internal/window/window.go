@@ -27,7 +27,7 @@ func requestOpenGLContext() {
 	glfw.WindowHint(glfw.OpenGLForwardCompatible, glfw.True)
 	glfw.WindowHint(glfw.OpenGLProfile, glfw.OpenGLCoreProfile)
 	glfw.WindowHint(glfw.ContextVersionMajor, 4)
-	glfw.WindowHint(glfw.ContextVersionMinor, 6)
+	glfw.WindowHint(glfw.ContextVersionMinor, 5)
 }
 
 func centralize(window *glfw.Window, width, height int) {

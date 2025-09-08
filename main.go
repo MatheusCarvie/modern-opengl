@@ -3,6 +3,7 @@ package main
 import (
 	"modern-opengl/internal/render"
 	"modern-opengl/internal/shader"
+	"modern-opengl/internal/utils"
 	"modern-opengl/internal/window"
 	"runtime"
 
@@ -19,6 +20,9 @@ var (
 )
 
 func main() {
+	utils.InitializeLogger()
+	defer utils.CloseLogger()
+
 	runtime.LockOSThread()
 	defer runtime.UnlockOSThread()
 
