@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/go-gl/gl/v4.6-core/gl"
+	"github.com/go-gl/gl/v4.5-core/gl"
 )
 
 // LoadFile carrega o código fonte de um shader a partir de um arquivo.

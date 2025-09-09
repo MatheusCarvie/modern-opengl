@@ -7,7 +7,7 @@ import (
 	"modern-opengl/internal/window"
 	"runtime"
 
-	"github.com/go-gl/gl/v4.6-core/gl"
+	"github.com/go-gl/gl/v4.5-core/gl"
 	"github.com/go-gl/glfw/v3.3/glfw"
 )
 
@@ -20,9 +20,11 @@ var (
 )
 
 func main() {
+	// Cria files de log
 	utils.InitializeLogger()
 	defer utils.CloseLogger()
 
+	// Garante que a goroutine atual fica presa em uma thread do SO
 	runtime.LockOSThread()
 	defer runtime.UnlockOSThread()
 
