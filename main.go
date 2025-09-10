@@ -7,7 +7,7 @@ import (
 	"modern-opengl/internal/window"
 	"runtime"
 
-	"github.com/go-gl/gl/v4.1-core/gl"
+	"github.com/go-gl/gl/v4.3-core/gl"
 	"github.com/go-gl/glfw/v3.3/glfw"
 )
 
@@ -45,8 +45,11 @@ func main() {
 	defer gl.DeleteBuffers(1, vbo)      // Desativa o VBO
 	defer gl.DeleteVertexArrays(1, vao) // Desativa o VAO
 
-	vSource := shader.LoadFile("./internal/shader/vertex.glsl")   // Obtem vertex source
-	fSource := shader.LoadFile("./internal/shader/fragment.glsl") // Obtem o fragment source
+	// vSource := shader.LoadFile("./internal/shader/vertex.glsl")   // Obtem vertex source
+	// fSource := shader.LoadFile("./internal/shader/fragment.glsl") // Obtem o fragment source
+
+	vSource := shader.GetVertexSource()   // Obtem vertex source
+	fSource := shader.GetFragmentSource() // Obtem o fragment source
 
 	vShader := shader.CompileShader(gl.VERTEX_SHADER, vSource)   // Compila o vertex shader
 	fShader := shader.CompileShader(gl.FRAGMENT_SHADER, fSource) // Compila o fragment shader

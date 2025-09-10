@@ -1,12 +1,27 @@
 package shader
 
 import (
+	_ "embed"
 	"fmt"
 	"log"
 	"os"
 
-	"github.com/go-gl/gl/v4.1-core/gl"
+	"github.com/go-gl/gl/v4.3-core/gl"
 )
+
+//go:embed vertex.glsl
+var vertexSource string
+
+//go:embed fragment.glsl
+var fragmentSource string
+
+func GetVertexSource() string {
+	return vertexSource
+}
+
+func GetFragmentSource() string {
+	return fragmentSource
+}
 
 // LoadFile carrega o código fonte de um shader a partir de um arquivo.
 // Se falhar, encerra o programa.
