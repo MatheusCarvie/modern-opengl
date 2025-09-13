@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/go-gl/gl/v4.3-core/gl"
+	"github.com/go-gl/gl/v4.4-core/gl"
 )
 
 //go:embed vertex.glsl
